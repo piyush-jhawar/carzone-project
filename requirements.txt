@@ -2,3 +2,10 @@ Django
 pillow
 whitenoise
 autopep8
+django-allauth
+django-ckeditor
+django-multiselectfield
+gunicorn
+psycopg2
+psycopg2-binary
+Faker
