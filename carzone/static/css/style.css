@@ -3342,6 +3342,10 @@ input[type=checkbox]:checked + label:before {
     background: #dc4e41!important;
 }
 
+.team-1 .linkedin-bg:hover {
+    background: #0177b5!important;
+}
+
 .our-team-2{
     background: rgba(0, 0, 0, 0.04) url(../img/bg-img-6.jpg) top left repeat;
     background-size: cover;

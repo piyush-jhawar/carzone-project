@@ -9,3 +9,5 @@ gunicorn
 psycopg2
 psycopg2-binary
 Faker
+django-phonenumber-field
+django-phonenumbers
