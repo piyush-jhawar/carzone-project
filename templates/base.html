@@ -39,8 +39,10 @@
 
 <body>
     <div class="page_loader"></div>
-    
+    {% for companydetail in companydetails %}
     {% include 'includes/topbar.html' %}
+    {% endfor %}  
+    
     {% include 'includes/navbar.html' %}
 
     {% block content %}
@@ -54,7 +56,7 @@
         <button type="submit" class="btn btn-sm button-theme">Search</button>
     </form>
 </div>
-{% for social in socials %}
+{% for companydetail in companydetails %}
     {% include 'includes/footer.html' %}
     {% endfor %}
 

@@ -5,15 +5,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <p class="copy">© {{ social.copyright_year }} <a href="#">Carzone Corp.</a> All Rights Reserved.</p>
+                    <!-- <p class="copy">© {{ companydetail.copyright_year }} <a href="#">Carzone Corp.</a> All Rights Reserved.</p> -->
+                    <p class="copy">© {% now 'Y' %} Carzone Corp. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="social-list-2">
                         <ul>
-                            <li><a href="{{ social.facebook }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="{{ social.twitter }}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="{{ social.instagram }}" target="_blank" class="google-bg"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="{{ social.linkedIn }}" target="_blank" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{{ companydetail.facebook }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ companydetail.twitter }}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ companydetail.instagram }}" target="_blank" class="google-bg"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="{{ companydetail.linkedIn }}" target="_blank" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>

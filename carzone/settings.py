@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'phonenumber_field',
+    'cars.apps.CarsConfig',
+    'ckeditor',
+    'multiselectfield',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +70,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'pages.views.socials',
+                'pages.views.companydetails',
             ],
         },
     },

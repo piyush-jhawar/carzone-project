@@ -9772,6 +9772,11 @@ a.nav-link.active{
   color: #fff !important;
 }
 
+/* Custom for link to be inactive */
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
 
 
 
