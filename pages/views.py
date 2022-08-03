@@ -12,7 +12,14 @@ def home(request):
         featured_cars = Car.objects.order_by(
             '-created_date').filter(is_featured=True)
         all_cars = Car.objects.order_by('-created_date').all()
-        return render(request=request, template_name="pages/home.html", context={"teams": teams, "featured_cars": featured_cars, "all_cars": all_cars})
+        search_fields = Car.objects.values('city', 'state')
+        # year = Car.objects.distinct('year')
+        model_search = Car.objects.values_list('model', flat=True).distinct()
+        city_search = Car.objects.values_list('city', flat=True).distinct()
+        year_search = Car.objects.values_list('year', flat=True).distinct()
+        body_search = Car.objects.values_list('body_style', flat=True).distinct()
+        return render(request=request, template_name="pages/home.html", context={"teams": teams, "featured_cars": featured_cars, "all_cars": all_cars,
+                                                                                 "search_fields": search_fields, "model_search": model_search,  "city_search": city_search,  "year_search": year_search,  "body_search": body_search})
     elif request.method == "POST":
         pass
 

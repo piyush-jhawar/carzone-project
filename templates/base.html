@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,22 +42,23 @@
     <div class="page_loader"></div>
     {% for companydetail in companydetails %}
     {% include 'includes/topbar.html' %}
-    {% endfor %}  
-    
+    {% endfor %}
+
     {% include 'includes/navbar.html' %}
 
     {% block content %}
     {% endblock content %}
 
-        <!-- Full Page Search -->
-<div id="full-page-search">
-    <button type="button" class="close">×</button>
-    <form action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#" class="search-header">
-        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" />
-        <button type="submit" class="btn btn-sm button-theme">Search</button>
-    </form>
-</div>
-{% for companydetail in companydetails %}
+    <!-- Full Page Search -->
+    <div id="full-page-search">
+        <button type="button" class="close">×</button>
+        <form action="{% url 'search' %}" class="search-header">
+            <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" name="keyword" />
+            <button type="submit" class="btn btn-sm button-theme">Search</button>
+        </form>
+    </div>
+
+    {% for companydetail in companydetails %}
     {% include 'includes/footer.html' %}
     {% endfor %}
 
@@ -84,4 +86,5 @@
     <script src="{% static 'js/app.js' %}"></script>
 
 </body>
+
 </html>

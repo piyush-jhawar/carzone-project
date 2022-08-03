@@ -41,6 +41,7 @@ class CompanyDetail(models.Model):
     twitter = models.URLField(max_length=200, unique=True, blank=True)
     instagram = models.URLField(max_length=200, unique=True, blank=True)
     linkedIn = models.URLField(max_length=200, unique=True, blank=True)
+    rss = models.URLField(max_length=200, unique=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
 

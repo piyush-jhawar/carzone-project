@@ -3938,6 +3938,10 @@ footer {
     background: #0177b5!important;
 }
 
+.footer .rss-bg:hover {
+    background: #e78733 !important;
+}
+
 .footer .f-logo{
     margin-bottom: 0px;
     height: 50px;

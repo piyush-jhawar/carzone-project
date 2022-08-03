@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
+{% load contact_format %}
 
 {% block content %}
 
@@ -122,7 +123,9 @@
                                     <h3 class="heading-2">
                                         Description
                                     </h3>
-                                    <p>{{ single_car.description }}</p>
+                                    <!-- {% autoescape off %} -->
+                                    <p>{{ single_car.description | safe }}</p>
+                                    <!-- {% endautoescape %} -->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
@@ -293,26 +296,25 @@
                     </div>
                     <!-- Question start -->
                     <div class="widget question">
-                        <h5 class="sidebar-title">Get a Question?</h5>
+                        <h5 class="sidebar-title">Got a Question?</h5>
                         <ul class="contact-info">
-                            <li>
+                            <!-- <li>
                                 <i class="flaticon-pin"></i>20/F Green Road, Dhanmondi
-                            </li>
+                            </li> -->
                             <li>
                                 <i class="flaticon-mail"></i><a
-                                    href="mailto:info@themevessel.com">info@themevessel.com</a>
+                                    href="mailto:{{ companydetails.first.email }}">{{ companydetails.first.email }}</a>
                             </li>
                             <li>
-                                <i class="flaticon-phone"></i><a href="tel:+0477-85x6-552">+0477 85x6 552</a>
+                                <i class="flaticon-phone"></i><a href="tel:{{ companydetails.first.mobile | phonenumber }}">{{ companydetails.first.mobile | phonenumber }}</a>
                             </li>
                         </ul>
                         <div class="social-list clearfix">
                             <ul>
-                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{{ companydetail.facebook }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ companydetail.twitter }}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ companydetail.instagram }}" target="_blank" class="google-bg"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="{{ companydetail.linkedIn }}" target="_blank" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>
