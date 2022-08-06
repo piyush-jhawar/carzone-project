@@ -9782,6 +9782,10 @@ a.nav-link.active{
     cursor: default;
  }
 
+input:required:valid {
+    border: 2px solid green !important;
+
+}
 
 
 
