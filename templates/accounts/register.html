@@ -52,13 +52,15 @@
                             <i class="flaticon-mail"></i>
                         </div>
                         <div class="form-group form-box">
-                            <input type="password" name="password" class="input-text" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.confirm_password.pattern = this.value;" placeholder="Password" required>
+                            <input type="password" name="password" id="password1" class="input-text" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.confirm_password.pattern = this.value;" placeholder="Password" required>
                             <i class="flaticon-lock"></i>
+                            <i class="fa fa-eye-slash" id="togglePassword1" style="margin-left: 500px; cursor: pointer;"></i>
                         </div>
                         <div class="form-group form-box">
-                            <input type="password" name="confirm_password" class="input-text" onmouseout="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
+                            <input type="password" name="confirm_password" id="password2" class="input-text" onmouseout="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
                                 placeholder="Confirm Password" required>
                             <i class="flaticon-lock"></i>
+                            <i class="fa fa-eye-slash" id="togglePassword2" style="margin-left: 500px; cursor: pointer;"></i>
                         </div>
                         <div class="form-group mb-0 clearfix">
                             <button type="submit" class="btn-md btn-theme float-center">Register</button>
