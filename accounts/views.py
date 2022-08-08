@@ -2,6 +2,9 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages, auth
+from django.contrib.auth.decorators import login_required
+
+from contacts.models import Contact
 
 # Create your views here.
 
@@ -59,8 +62,10 @@ def register(request):
     return render(request=request, template_name="accounts/register.html", context={})
 
 
+@login_required(login_url = 'login')
 def dashboard(request):
-    return render(request=request, template_name="accounts/dashboard.html", context={})
+    user_inquiry = Contact.objects.order_by("-created_date").filter(user_id=request.user.id)
+    return render(request=request, template_name="accounts/dashboard.html", context={"inquiries": user_inquiry})
 
 
 def logout(request):

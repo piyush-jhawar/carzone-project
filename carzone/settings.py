@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'contacts.apps.ContactsConfig',
     
     #providers
     'allauth.socialaccount.providers.facebook',
@@ -105,8 +106,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'carzone_db',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         
     }
@@ -173,3 +174,16 @@ MESSAGE_TAGS = {
  }
 
 SITE_ID=1
+
+SESSION_COOKIE_AGE = 300
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST=True
+
+
+#Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_PORT=587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD=''
+EMAIL_USE_TLS=True
