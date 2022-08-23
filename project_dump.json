@@ -407,8 +407,8 @@
     "fields": {
         "provider": "facebook",
         "name": "Facebook login",
-        "client_id": "425199709641844",
-        "secret": "6bf9d97bbd8f4310b23177b601d05b9b",
+        "client_id": "",
+        "secret": "",
         "key": "",
         "sites": [
             [
@@ -423,8 +423,8 @@
     "fields": {
         "provider": "google",
         "name": "Google login",
-        "client_id": "388401896479-qdajp7in8ui3vcsitqn0rq7jsvmqf1ft.apps.googleusercontent.com",
-        "secret": "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",
+        "client_id": "",
+        "secret": "",
         "key": "",
         "sites": [
             [
