@@ -104,18 +104,18 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'carzone_db',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'carzone_db',
+#         'USER': '',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
         
-    }
-}
+#     }
+# }
 
-# DATABASES = {'default': dj_database_url.config(default='postgres://postgres:123456@localhost/carzone_db')}
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres:123456@localhost/carzone_db')}
 
 
 # Password validation
