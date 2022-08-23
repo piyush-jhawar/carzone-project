@@ -1,0 +1,8 @@
+#heroku run python manage.py createsuperuser
+#heroku run python manage.py loaddata
+#git push heroku master
+#heroku logs --tail
+#heroku open
+#heroku create
+#git remote rm heroku
+#heroku whoami
