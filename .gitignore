@@ -167,7 +167,8 @@ cython_debug/
 # media
 # /media
 
-project_dump.json
+# project_dump.json
+# myrequirements.txt
 herokusitedetails.txt
 
 # PyCharm
