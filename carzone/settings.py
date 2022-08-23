@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gn&c0rsb1ss+1l#ctjdu!u#q_z0#=5!6ec^w6(l92pwm+b4dtf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shrouded-forest-97326.herokuapp.com']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
