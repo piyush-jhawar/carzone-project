@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gn&c0rsb1ss+1l#ctjdu!u#q_z0#=5!6ec^w6(l92pwm+b4dtf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['', '127.0.0.1']
+ALLOWED_HOSTS = ['thawing-reaches-51643.herokuapp.com', '127.0.0.1']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
